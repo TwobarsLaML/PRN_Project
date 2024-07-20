@@ -1,0 +1,264 @@
+﻿<Window x:Class="HotelManagementWPFApp.Admin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HotelManagementWPFApp"
+        mc:Ignorable="d"
+        Title="Hetol Management" Height="500" Width="800"
+        WindowStartupLocation="CenterScreen">
+    <Window.Resources>
+        <local:RandomConverter x:Key="RandomConverter"/>
+    </Window.Resources>
+    <TabControl Name="tabMain"
+                    TabStripPlacement="Top">
+        <TabItem Name="tbCustomer"
+                     Header="Manage Customer">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="1"
+                            Grid.Column="1"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Content="Load"
+                            FontSize="18"
+                            Margin="0,0,50,0"
+                            Name="btnLoadCustomer"
+                            Click="btnLoadCustomer_Clicked"/>
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Content="Add"
+                            FontSize="18"
+                            Margin="0,0,50,0"
+                            Name="btnAddCustomer"
+                            Click="btnAddCustomer_Clicked"/>
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Content="Update"
+                            FontSize="18"
+                            Margin="0,0,50,0"
+                            Name="btnUpdateCustomer"
+                            Click="btnUpdateCustomer_Clicked"/>
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Content="Delete"
+                            FontSize="18"
+                            Name="btnDeleteCustomer"
+                            Click="btnDeleteCustomer_Clicked"/>
+
+                </StackPanel>
+                <StackPanel Grid.Row="3"
+                            Grid.Column="1"
+                            Orientation="Horizontal">
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Margin="15,0,0,0"
+                            Content="Search"
+                            FontSize="18"
+                            Name="btnSearchCustomer"
+                            Click="btnSearchCustomer_Clicked"/>
+                    <TextBox Width="200" 
+                             Height="30"
+                             VerticalContentAlignment="Center"
+                             Name="txtSearchCustomer"></TextBox>
+                    <Label>(By Name)</Label>
+                    <Button Grid.Column="1" Grid.Row="1" Margin="30,0,0,0"
+                            Width="150" Height="30"
+                            Content="Book Room No." FontSize="18"
+                            Name="BookRoomNumber" 
+                            Click="BookRoomNumber_Click"/>
+                    <TextBox Height="30" Width="120" VerticalContentAlignment="Center"
+                             Name="txtBookRoomNumber"/>
+                </StackPanel>
+                <DataGrid Grid.Column="1" IsReadOnly="True"
+                          Grid.Row="5" 
+                          VerticalScrollBarVisibility="auto"
+                          CanUserAddRows="False"
+                          Name="dgCustomer" AutoGenerateColumns="False"
+                          SelectionChanged="dgCustomer_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Width="1*" Header="Full name" Binding="{Binding CustomerFullName}"/>
+                        <DataGridTextColumn Width="1*" Header="Phone Number" Binding="{Binding Telephone}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <Button Name="btnLogout1"
+                        Grid.Column="1"
+                        Grid.Row="6"
+                        Content="Logout"
+                        Width="100"
+                        Height="30"
+                        Click="btnLogout_Clicked"></Button>
+
+            </Grid>
+
+
+        </TabItem>
+
+        <TabItem Name="tbRoom"
+                 Header="Manage Room">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="50"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <StackPanel Grid.Row="1"
+                            Grid.Column="1"
+                            Orientation="Horizontal"
+                            HorizontalAlignment="Center">
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Content="Load"
+                            FontSize="18"
+                            Margin="0,0,50,0"
+                            Name="btnLoadRoom"
+                            Click="btnLoadRoom_Clicked"/>
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Content="Add"
+                            FontSize="18"
+                            Margin="0,0,50,0"
+                            Name="btnAddRoom"
+                            Click="btnAddRoom_Clicked"/>
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Content="Update"
+                            FontSize="18"
+                            Margin="0,0,50,0"
+                            Name="btnUpdateRoom"
+                            Click="btnUpdateRoom_Clicked"/>
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Content="Delete"
+                            FontSize="18"
+                            Name="btnDeleteRoom"
+                            Click="btnDeleteRoom_Clicked"/>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="3"
+                            Grid.Column="1"
+                            Orientation="Horizontal">
+                    <Button Grid.Column="1"
+                            Grid.Row="1"
+                            Width="100"
+                            Height="30"
+                            Content="Search"
+                            FontSize="18"
+                            Name="btnSearchRoom"
+                            Click="btnSearchRoom_Clicked"/>
+                    <TextBox Width="200" 
+                             Height="30"
+                             VerticalContentAlignment="Center"
+                             Name="txtSearchRoom"></TextBox>
+                    <Label>(By Min Number of People)</Label>
+                </StackPanel>
+
+                <DataGrid Grid.Column="1" 
+                          Grid.Row="5"  IsReadOnly="True"
+                          VerticalScrollBarVisibility="auto"
+                          CanUserAddRows="False"
+                          Name="dgRoom" AutoGenerateColumns="False"
+                          SelectionChanged="dgRoom_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Room Number" Binding="{Binding RoomNumber}" />
+                        <DataGridTextColumn Header="Room Capacity" Binding="{Binding RoomMaxCapacity}" />
+                        <DataGridTextColumn Header="Room Status" Binding="{Binding RoomStatus, Converter={StaticResource RandomConverter}}"/>
+                        <DataGridTextColumn Header="Price" Binding="{Binding RoomPricePerDay, StringFormat={}{0:#,#.00}}" />
+                        <DataGridTextColumn Header="Description" Binding="{Binding RoomDetailDescription}" />
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <Button Name="btnLogout2"
+                        Grid.Column="1"
+                        Grid.Row="6"
+                        Content="Logout"
+                        Width="100"
+                        Height="30"
+                        Click="btnLogout_Clicked"></Button>
+
+            </Grid>
+        </TabItem>
+
+        <TabItem Name="tbReservation" Header="Reservation">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="80"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="80"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="110"/>
+                    <RowDefinition Height="261"/>
+                    <RowDefinition Height="85"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Row="0" Grid.Column="1" 
+                       Content="BOOKING TABLE" FontSize="50"
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"/>
+                <DataGrid Grid.Row="1" Grid.Column="1" 
+                          CanUserAddRows="False" VerticalScrollBarVisibility="auto"
+                          Name="dgBookingDetail" AutoGenerateColumns="False" SelectionChanged="dgBookingDetail_SelectionChanged">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Customer"  Width="1*"
+                        Binding="{Binding BookingReservation.Customer.CustomerFullName}"/>
+                        <DataGridTextColumn Header="Room No."  Width="1*"
+                        Binding="{Binding Room.RoomNumber}"/>
+                        <DataGridTextColumn Header="Customer Phone Number"  Width="1.5*"
+                        Binding="{Binding BookingReservation.Customer.Telephone}"/>
+                        <DataGridTextColumn Width="1*" Header="From" Binding="{Binding StartDate}"/>
+                        <DataGridTextColumn Header="Price Per Day" Binding="{Binding Room.RoomPricePerDay, StringFormat={}{0:#,#.00}}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+                <Button Grid.Column="1" Grid.Row="2" Name="btnDeleteBooking"
+                        Height="30" Width="120" Content="DELETE BOOKING" Click="btnDeleteBooking_Click"/>
+            </Grid>
+        </TabItem>
+    </TabControl>
+</Window>

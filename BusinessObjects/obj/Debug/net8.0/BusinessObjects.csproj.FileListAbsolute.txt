@@ -1,0 +1,16 @@
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\bin\Debug\net8.0\BusinessObjects.deps.json
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\bin\Debug\net8.0\BusinessObjects.dll
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\bin\Debug\net8.0\BusinessObjects.pdb
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\BusinessObjects.GeneratedMSBuildEditorConfig.editorconfig
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\BusinessObjects.AssemblyInfoInputs.cache
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\BusinessObjects.AssemblyInfo.cs
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\BusinessObjects.csproj.CoreCompileInputs.cache
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\BusinessObjects.sourcelink.json
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\BusinessObjects.dll
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\refint\BusinessObjects.dll
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\BusinessObjects.pdb
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\ref\BusinessObjects.dll
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\bin\Debug\net8.0\BusinessObjects.runtimeconfig.json
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\BusinessObjects.csproj.AssemblyReference.cache
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\obj\Debug\net8.0\BusinessObjects.genruntimeconfig.cache
+F:\TwoBars\eng\Programming\C#\TaVietHoang_SE1822_Assignment2\BusinessObjects\bin\Debug\net8.0\appsettings.json
